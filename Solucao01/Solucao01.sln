@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App01_ConsultarCEP.iOS", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App01_ConsultarCEP.UWP", "App01_ConsultarCEP\App01_ConsultarCEP.UWP\App01_ConsultarCEP.UWP.csproj", "{99EF81F5-00E2-469C-9B81-E89876241D90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App01_ConsultarCEP", "App01_ConsultarCEP\App01_ConsultarCEP\App01_ConsultarCEP.csproj", "{940DB05E-1BBD-47B5-B001-53F6DFAC4A73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App01_ConsultarCEP", "App01_ConsultarCEP\App01_ConsultarCEP\App01_ConsultarCEP.csproj", "{940DB05E-1BBD-47B5-B001-53F6DFAC4A73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -180,6 +180,8 @@ Global
 		{99EF81F5-00E2-469C-9B81-E89876241D90}.AppStore|x86.Build.0 = Release|x86
 		{99EF81F5-00E2-469C-9B81-E89876241D90}.AppStore|x86.Deploy.0 = Release|x86
 		{99EF81F5-00E2-469C-9B81-E89876241D90}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{99EF81F5-00E2-469C-9B81-E89876241D90}.Debug|Any CPU.Build.0 = Debug|x86
+		{99EF81F5-00E2-469C-9B81-E89876241D90}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{99EF81F5-00E2-469C-9B81-E89876241D90}.Debug|ARM.ActiveCfg = Debug|ARM
 		{99EF81F5-00E2-469C-9B81-E89876241D90}.Debug|ARM.Build.0 = Debug|ARM
 		{99EF81F5-00E2-469C-9B81-E89876241D90}.Debug|ARM.Deploy.0 = Debug|ARM
