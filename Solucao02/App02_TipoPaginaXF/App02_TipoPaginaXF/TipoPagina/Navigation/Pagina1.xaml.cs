@@ -16,5 +16,9 @@ namespace App02_TipoPaginaXF.TipoPagina.Navigation
 		{
 			InitializeComponent ();
 		}
+
+        private void MudarPagina2(object sender, EventArgs args) {
+            Navigation.PushAsync(new Pagina2());
+        }
 	}
 }
