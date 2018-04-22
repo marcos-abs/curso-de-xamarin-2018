@@ -18,7 +18,7 @@ namespace App02_TipoPaginaXF.TipoPagina.Navigation
 		}
 
         private void FecharModal(object sender, EventArgs args) {
-            Navigation.PopModalAsync(); // retorna o ultimo PushModalAsync estilo FIFO.
+            Navigation.PopModalAsync(); // retorna o ultimo PushModalAsync estilo "FIFO".
         }
 
     }
