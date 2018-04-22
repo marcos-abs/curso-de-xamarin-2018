@@ -15,7 +15,7 @@ namespace App02_TipoPaginaXF.TipoPagina.Tabbed
 		public Abas ()
 		{
 			InitializeComponent ();
-            Children.Add(new NavigationPage(new TipoPagina.Navigation.Pagina1()) { Title="item 3"});
+            Children.Add(new NavigationPage(new TipoPagina.Navigation.Pagina1()) { Title="item 3a"}); //corrigido
 		}
 	}
 }
