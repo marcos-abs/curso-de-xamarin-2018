@@ -3,10 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App01_LayoutXF.Layouts.Absolute.AbsolutePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <AbsoluteLayout>
+            <BoxView AbsoluteLayout.LayoutBounds="0, 0, 200, 100" BackgroundColor="Blue" /> <!-- AbsoluteLayout.LayoutBounds="X, Y, W, H" -->
+            <BoxView AbsoluteLayout.LayoutBounds="50, 50, 100, 100" BackgroundColor="Green" /> <!-- Sobreposição da BoxView na tela -->
+            <BoxView AbsoluteLayout.LayoutBounds="150, 150, 50, 50" BackgroundColor="Red" />
+            <BoxView AbsoluteLayout.LayoutFlags="WidthProportional" AbsoluteLayout.LayoutBounds="0, 400, 0.8, 100" BackgroundColor="Yellow" /> <!-- 0.8 = 80% da tela -->
+            <BoxView AbsoluteLayout.LayoutFlags="SizeProportional" AbsoluteLayout.LayoutBounds="300, 300, 0.5, 0.5" BackgroundColor="GreenYellow" /> <!-- 0.5 = 50% da tela -->
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
