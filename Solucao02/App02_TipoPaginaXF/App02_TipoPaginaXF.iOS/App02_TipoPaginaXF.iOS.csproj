@@ -131,4 +131,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\xamarin.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\play.png" />
+  </ItemGroup>
 </Project>
