@@ -11,9 +11,9 @@
                     <Image Source="Logo.png" HorizontalOptions="Center" VerticalOptions="Center" />
                 </StackLayout>
                 <StackLayout Spacing="50">
-                    <Button Text="Miguel de Icaza" FontSize="28" TextColor="White" BackgroundColor="Transparent" Clicked="GoPaginaPerfil1" />
+                    <Button Text="Miguel de Icaza" FontSize="28" TextColor="White" BackgroundColor="Transparent" Clicked="GoPaginaPerfil1"/>
                     <Button Text="Joseph Hill" FontSize="28" TextColor="White" BackgroundColor="Transparent" />
-                    <Button Text="Nat Frieman" FontSize="28" TextColor="White" BackgroundColor="Transparent" />
+                    <Button Text="Nat Friedman" FontSize="28" TextColor="White" BackgroundColor="Transparent" />
                     <Button Text="Sobre a Xamarin" FontSize="28" TextColor="White" BackgroundColor="Transparent" Clicked="GoPaginaXamarin" />
                 </StackLayout>
             </StackLayout>
