@@ -9,6 +9,7 @@
                 <Button Text="Activity Indicator" Clicked="GoActivityIndicatorPage" />
                 <Button Text="Progress Bar" Clicked="GoProgressBarPage" />
                 <Button Text="Box View" Clicked="GoBoxViewPage" />
+                <Button Text="Label" Clicked="GoLabelPage" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
