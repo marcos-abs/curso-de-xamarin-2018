@@ -10,11 +10,19 @@ using Xamarin.Forms.Xaml;
 namespace App02_Xamarin.Master
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Menu : ContentPage
+	public partial class Menu : MasterDetailPage
 	{
 		public Menu ()
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void GoPaginaPerfil1(object sender, EventArgs args) {
+            Navigation.PushAsync(new Pages.Perfil1());
+        }
+
+        private void GoPaginaXamarin(object sender, EventArgs args) {
+            Navigation.PushAsync(new Pages.Xamarin());
+        }
+    }
 }
