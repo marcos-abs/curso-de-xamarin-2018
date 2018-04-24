@@ -5,10 +5,10 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms! Welcome to Xamarin.Forms! Welcome to Xamarin.Forms! Welcome to Xamarin.Forms! Welcome to Xamarin.Forms! Welcome to Xamarin.Forms! Welcome to Xamarin.Forms!"
-                TextColor="White"
-                FontSize="24"
-                FontAttributes="Italic"
-                LineBreakMode="WordWrap"
+                   TextColor="White"
+                   FontSize="24"
+                   FontAttributes="Italic"
+                   LineBreakMode="WordWrap"
                    
                 BackgroundColor="Black"
                 VerticalOptions="CenterAndExpand" 
