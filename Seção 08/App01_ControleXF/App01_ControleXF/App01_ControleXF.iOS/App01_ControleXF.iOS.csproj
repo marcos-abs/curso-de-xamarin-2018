@@ -128,4 +128,7 @@
       <Name>App01_ControleXF</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pushbutton.png" />
+  </ItemGroup>
 </Project>

@@ -10,6 +10,7 @@
                 <Button Text="Progress Bar" Clicked="GoProgressBarPage" />
                 <Button Text="Box View" Clicked="GoBoxViewPage" />
                 <Button Text="Label" Clicked="GoLabelPage" />
+                <Button Text="Button" Clicked="GoButtonPage" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
