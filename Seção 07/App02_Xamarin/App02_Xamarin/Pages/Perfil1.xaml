@@ -4,8 +4,32 @@
              x:Class="App02_Xamarin.Pages.Perfil1">
     <ContentPage.Content>
         <StackLayout Spacing="0">
-            <RelativeLayout VerticalOptions="Start" HeightRequest="300" BackgroundColor="Yellow">
-                
+            <RelativeLayout VerticalOptions="Start" HeightRequest="300">
+                <Image Source="Fundo.png" 
+                       RelativeLayout.WidthConstraint="{
+                            ConstraintExpression Type=RelativeToParent,
+                            Property=Width, Factor=1}"
+                       />
+                <Image Source="Perfil.png" 
+                       x:Name="Perfil"
+                       RelativeLayout.XConstraint="{
+                       ConstraintExpression Type=RelativeToParent, 
+                       Property=Width, Factor=0.5, Constant=-60 }" 
+                       RelativeLayout.YConstraint="{
+                       ConstraintExpression Type=RelativeToParent, 
+                       Property=Height, Factor=0.2 }" 
+                       WidthRequest="120"
+                       />
+                      <!-- para centralizar a imagem é necessário recuar 60px (metade de 120)-->
+                <Label Text="Miguel de Icaza"
+                       RelativeLayout.XConstraint="{
+                       ConstraintExpression Type=RelativeToView,
+                       ElementName=Perfil, Property=X, Factor=1 }"
+                       RelativeLayout.YConstraint="{
+                       ConstraintExpression Type=RelativeToView,
+                       ElementName=Perfil, Property=Y, Factor=1, Constant=180 }"
+                       />
+                       <!-- utilizando como referencia a imagem Perfil.png -->
             </RelativeLayout>
             <Grid HeightRequest="120" BackgroundColor="#0d1f2d">
                 <Grid.ColumnDefinitions>
