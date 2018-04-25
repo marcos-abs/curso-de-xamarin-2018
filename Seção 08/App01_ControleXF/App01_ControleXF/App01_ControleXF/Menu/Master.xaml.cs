@@ -53,5 +53,9 @@ namespace App01_ControleXF.Menu
         private void GoPickerPage(object sender, EventArgs args) {
             Detail = new Controles.PickerPage();
         }
+
+        private void GoSearchBarPage(object sender, EventArgs args) {
+            Detail = new Controles.SearchBarPage();
+        }
     }
 }
