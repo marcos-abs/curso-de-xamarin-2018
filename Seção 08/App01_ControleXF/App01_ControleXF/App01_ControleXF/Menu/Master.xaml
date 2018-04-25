@@ -13,6 +13,7 @@
                 <Button Text="Button" Clicked="GoButtonPage" />
                 <Button Text="Entry/Editor" Clicked="GoEntryEditorPage" />
                 <Button Text="Date Picker" Clicked="GoDatePickerPage" />
+                <Button Text="Time Picker" Clicked="GoTimePickerPage" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
