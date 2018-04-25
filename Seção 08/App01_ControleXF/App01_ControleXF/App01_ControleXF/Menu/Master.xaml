@@ -12,6 +12,7 @@
                 <Button Text="Label" Clicked="GoLabelPage" />
                 <Button Text="Button" Clicked="GoButtonPage" />
                 <Button Text="Entry/Editor" Clicked="GoEntryEditorPage" />
+                <Button Text="Date Picker" Clicked="GoDatePickerPage" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
