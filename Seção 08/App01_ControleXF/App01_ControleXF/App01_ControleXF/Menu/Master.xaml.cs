@@ -37,5 +37,9 @@ namespace App01_ControleXF.Menu
         private void GoButtonPage(object sender, EventArgs args) {
             Detail = new Controles.ButtonPage();
         }
+
+        private void GoEntryEditorPage(object sender, EventArgs args) {
+            Detail = new Controles.EntryEditorPage();
+        }
     }
 }
