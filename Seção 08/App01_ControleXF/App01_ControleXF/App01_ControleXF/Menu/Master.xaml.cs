@@ -65,5 +65,9 @@ namespace App01_ControleXF.Menu
         private void GoSwitcherPage(object sender, EventArgs args) {
             Detail = new Controles.SwitchPage();
         }
+
+        private void GoImagePage(object sender, EventArgs args) {
+            Detail = new Controles.ImagePage();
+        }
     }
 }
