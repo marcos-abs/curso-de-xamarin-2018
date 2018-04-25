@@ -61,5 +61,9 @@ namespace App01_ControleXF.Menu
         private void GoSliderStepperPage(object sender, EventArgs args) {
             Detail = new Controles.SliderStepperPage();
         }
+
+        private void GoSwitcherPage(object sender, EventArgs args) {
+            Detail = new Controles.SwitchPage();
+        }
     }
 }
