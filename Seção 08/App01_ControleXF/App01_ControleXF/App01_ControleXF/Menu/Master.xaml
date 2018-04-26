@@ -19,6 +19,7 @@
                 <Button Text="Slider/Stepper" Clicked="GoSliderStepperPage" />
                 <Button Text="Switcher" Clicked="GoSwitcherPage" />
                 <Button Text="Image" Clicked="GoImagePage" />
+                <Button Text="ListView" Clicked="GoListViewPage" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
