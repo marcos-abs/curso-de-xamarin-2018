@@ -15,6 +15,14 @@ namespace App01_ControleXF.Controles
 		public ImagePage ()
 		{
 			InitializeComponent ();
+
+            Image imgUSB = new Image();
+            if(Device.RuntimePlatform == Device.UWP) {
+                imgUSB.Source = ImageSource.FromFile("Imagem/usb.jpg");
+            } else {
+                imgUSB.Source = ImageSource.FromFile("usb.jpg");
+            }
+            Container.Children.Add(imgUSB);
 		}
 	}
 }
