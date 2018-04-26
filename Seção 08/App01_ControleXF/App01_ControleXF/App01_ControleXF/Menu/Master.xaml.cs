@@ -73,5 +73,9 @@ namespace App01_ControleXF.Menu
         private void GoListViewPage(object sender, EventArgs args) {
             Detail = new Controles.ListViewPage();
         }
+
+        private void GoTableViewPage(object sender, EventArgs args) {
+            Detail = new Controles.TableViewPage();
+        }
     }
 }
