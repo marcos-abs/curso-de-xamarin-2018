@@ -64,7 +64,7 @@
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
             </StackLayout>
-            <Button Text="OK" TextColor="White" BackgroundColor="Blue" HorizontalOptions="End" />
+            <Button Clicked="SalvarAction" Text="OK" TextColor="White" BackgroundColor="Blue" HorizontalOptions="End" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

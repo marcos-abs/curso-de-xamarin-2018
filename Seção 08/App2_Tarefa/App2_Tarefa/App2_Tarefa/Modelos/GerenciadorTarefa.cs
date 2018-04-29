@@ -4,19 +4,24 @@ using System.Text;
 
 namespace App2_Tarefa.Modelos {
     public class GerenciadorTarefa {
+
         private List<Tarefa> Lista { get; set; }
+
         public void Salvar(Tarefa tarefa) {
+            Lista = Listagem();
             Lista.Add(tarefa);
             SalvarNoProperties(Lista);
         }
 
         public void Deletar(Tarefa tarefa) {
+            Lista = Listagem();
             Lista.Remove(tarefa);
             SalvarNoProperties(Lista);
         }
 
         public void Finalizar(int index, Tarefa tarefa) {
             //Lista.Remove(tarefa); // mudado para buscar pelo indice da propriedade.
+            Lista = Listagem();
             Lista.RemoveAt(index);
             Lista.Add(tarefa);
             SalvarNoProperties(Lista);
