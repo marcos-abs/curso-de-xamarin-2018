@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C4BE6317-7A24-4A23-8F5A-C5EE1BF77B46}</ProjectGuid>
+    <ProjectGuid>{6DACD241-2F54-4031-BCF0-8A0F60D930D2}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>App01_ControleXF.Droid</RootNamespace>
-    <AssemblyName>App01_ControleXF.Android</AssemblyName>
+    <RootNamespace>App2_Tarefa.Droid</RootNamespace>
+    <AssemblyName>App2_Tarefa.Android</AssemblyName>
     <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -79,32 +79,14 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\App01_ControleXF\App01_ControleXF.csproj">
-      <Project>{5AB5D52D-74E5-4AB7-B70B-A68257875F95}</Project>
-      <Name>App01_ControleXF</Name>
+    <ProjectReference Include="..\App2_Tarefa\App2_Tarefa.csproj">
+      <Project>{96395532-7175-4AB0-9C3C-B8131DD133C5}</Project>
+      <Name>App2_Tarefa</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\pushbutton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\usb.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\usb.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-ldpi\usb.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\usb.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\usb.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\usb.jpg" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+
+
+ <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
