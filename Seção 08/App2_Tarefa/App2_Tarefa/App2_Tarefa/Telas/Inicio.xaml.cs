@@ -74,10 +74,12 @@ namespace App2_Tarefa.Telas
                     HorizontalOptions = LayoutOptions.FillAndExpand,
                     Spacing = 0
                 };
+
                 ((StackLayout)StackCentral).Children.Add(new Label() {
                     Text = tarefa.Nome,
                     TextColor = Color.Gray
                 });
+
                 ((StackLayout)StackCentral).Children.Add(new Label() {
                     Text = "Finalizado em " + tarefa.DataFinalizacao.Value.ToString("dd/MM/yyyy - hh:mm") + "h",
                     TextColor = Color.Gray,
