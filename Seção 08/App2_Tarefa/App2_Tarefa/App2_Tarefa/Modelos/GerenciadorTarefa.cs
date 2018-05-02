@@ -15,9 +15,10 @@ namespace App2_Tarefa.Modelos {
             SalvarNoProperties(Lista);
         }
 
-        public void Deletar(Tarefa tarefa) {
+        public void Deletar(int index) {
             Lista = Listagem();
-            Lista.Remove(tarefa);
+            Lista.RemoveAt(index);
+
             SalvarNoProperties(Lista);
         }
 
@@ -25,6 +26,9 @@ namespace App2_Tarefa.Modelos {
             //Lista.Remove(tarefa); // mudado para buscar pelo indice da propriedade.
             Lista = Listagem();
             Lista.RemoveAt(index);
+
+            tarefa.DataFinalizacao = DateTime.Now;
+
             Lista.Add(tarefa);
             SalvarNoProperties(Lista);
         }

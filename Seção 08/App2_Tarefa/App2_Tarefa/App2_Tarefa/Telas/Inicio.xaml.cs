@@ -30,12 +30,14 @@ namespace App2_Tarefa.Telas
 
             List<Tarefa> Lista = new GerenciadorTarefa().Listagem();
 
+            int i = 0;
             foreach (Tarefa tarefa in Lista) {
-                LinhaStackLayout(tarefa);
+                LinhaStackLayout(tarefa, i);
+                i++;
             }
         }
 
-        public void LinhaStackLayout(Tarefa tarefa) {
+        public void LinhaStackLayout(Tarefa tarefa, int index) {
 
             Image Delete = new Image() {
                 VerticalOptions = LayoutOptions.Center,
@@ -44,7 +46,12 @@ namespace App2_Tarefa.Telas
             if (Device.RuntimePlatform == Device.UWP) {
                 Delete.Source = ImageSource.FromFile("Resources/Delete.png");
             }
-            Delete.GestureRecognizers.Add();
+            TapGestureRecognizer DeleteTap = new TapGestureRecognizer();
+            DeleteTap.Tapped += delegate {
+                new GerenciadorTarefa().Deletar(index);
+                CarregarTarefas();
+            };
+            Delete.GestureRecognizers.Add(DeleteTap);
 
             Image Prioridade = new Image() {
                 VerticalOptions = LayoutOptions.Center,
@@ -82,9 +89,21 @@ namespace App2_Tarefa.Telas
                 VerticalOptions = LayoutOptions.Center,
                 Source = ImageSource.FromFile("CheckOff.png")
             };
-            if(Device.RuntimePlatform == Device.UWP) {
+            if (Device.RuntimePlatform == Device.UWP) {
                 Check.Source = ImageSource.FromFile("Resources/CheckOff.png");
-	        }
+            }
+            if (tarefa.DataFinalizacao != null) {
+                Check.Source = ImageSource.FromFile("CheckOn.png");
+                if (Device.RuntimePlatform == Device.UWP) {
+                    Check.Source = ImageSource.FromFile("Resources/CheckOn.png");
+                }
+            }
+            TapGestureRecognizer CheckTap = new TapGestureRecognizer();
+            CheckTap.Tapped += delegate {
+                new GerenciadorTarefa().Finalizar(index, tarefa);
+                CarregarTarefas();
+            };
+            Check.GestureRecognizers.Add(CheckTap);
 
             StackLayout Linha = new StackLayout() { Orientation = StackOrientation.Horizontal, Spacing = 15 };
 
