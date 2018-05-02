@@ -82,9 +82,7 @@ namespace App2_Tarefa.Telas
                     Text = "Finalizado em " + tarefa.DataFinalizacao.Value.ToString("dd/MM/yyyy - hh:mm") + "h",
                     TextColor = Color.Gray,
                     FontSize = 10
-
                 });
-
             }
 
             Image Check = new Image() {
