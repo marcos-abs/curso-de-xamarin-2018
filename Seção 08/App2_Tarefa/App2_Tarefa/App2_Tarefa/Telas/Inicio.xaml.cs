@@ -44,6 +44,8 @@ namespace App2_Tarefa.Telas
             if (Device.RuntimePlatform == Device.UWP) {
                 Delete.Source = ImageSource.FromFile("Resources/Delete.png");
             }
+            Delete.GestureRecognizers.Add();
+
             Image Prioridade = new Image() {
                 VerticalOptions = LayoutOptions.Center,
                 Source = ImageSource.FromFile("p" + tarefa.Prioridade + ".png")
@@ -70,7 +72,7 @@ namespace App2_Tarefa.Telas
                     TextColor = Color.Gray
                 });
                 ((StackLayout)StackCentral).Children.Add(new Label() {
-                    Text = "Finalizado em " + tarefa.DataFinalizacao.ToString("dd/MM/yyyy - hh:mm") + "h",
+                    Text = "Finalizado em " + tarefa.DataFinalizacao.Value.ToString("dd/MM/yyyy - hh:mm") + "h",
                     TextColor = Color.Gray,
                     FontSize = 10
                 });
