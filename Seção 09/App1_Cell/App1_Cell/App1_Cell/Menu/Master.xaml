@@ -8,6 +8,7 @@
             <StackLayout>
                 <Button Text="TextCell" Clicked="GoPagina1" />
                 <Button Text="ImageCell" Clicked="GoPagina2" />
+                <Button Text="EntryCell" Clicked="GoPagina3" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
