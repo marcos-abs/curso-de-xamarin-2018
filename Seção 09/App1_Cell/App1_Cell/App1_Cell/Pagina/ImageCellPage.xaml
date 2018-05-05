@@ -6,6 +6,7 @@
         <ListView x:Name="ListaFuncionario">
             <ListView.ItemTemplate>
                 <DataTemplate>
+                    <!-- ImageCell Exemplo -->
                     <ImageCell Text="{Binding Nome}" Detail="{Binding Cargo}" ImageSource="{Binding Foto}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
