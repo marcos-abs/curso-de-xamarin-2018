@@ -32,5 +32,16 @@ namespace App1_Cell.Pagina
             Funcionario func = (Funcionario)args.SelectedItem;
             Navigation.PushAsync(new Detalhe.DetailPage(func));
         }
+
+        private void FeriasAction (object sender, EventArgs args) {
+            MenuItem botao = (MenuItem)sender;
+            Funcionario func = (Funcionario)botao.CommandParameter;
+
+            DisplayAlert("Titulo: " + func.Nome, "Mensagem: " + func.Nome + " - " + func.Cargo, "OK");
+        }
+
+        private void AbonoAction(object sender, EventArgs args) {
+
+        }
     }
 }
