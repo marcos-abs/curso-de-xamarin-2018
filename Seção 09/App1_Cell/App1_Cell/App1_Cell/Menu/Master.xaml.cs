@@ -40,5 +40,9 @@ namespace App1_Cell.Menu
         public void GoPagina6(object sender, EventArgs args) {
             Detail = new NavigationPage(new Pagina.ListViewPage());
         }
+
+        public void GoPagina7(object sender, EventArgs args) {
+            Detail = new NavigationPage(new Pagina.ListViewButtonPage());
+        }
     }
 }
