@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1_Cell.Pagina.ListViewButtonPage">
     <ContentPage.Content>
-        <ListView x:Name="ListaFuncionario">
+        <ListView x:Name="ListaFuncionario" HasUnevenRows="True">
+            <!-- RowHeight="" // para tamanhos fixos -->
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
