@@ -32,5 +32,9 @@ namespace App1_Cell.Menu
         public void GoPagina4(object sender, EventArgs args) {
             Detail = new NavigationPage(new Pagina.SwitchCellPage());
         }
+
+        public void GoPagina5(object sender, EventArgs args) {
+            Detail = new NavigationPage(new Pagina.ViewCellPage());
+        }
     }
 }
