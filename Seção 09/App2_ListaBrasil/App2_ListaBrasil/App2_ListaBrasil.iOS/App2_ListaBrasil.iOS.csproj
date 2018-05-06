@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E3A4AB36-4A62-4F46-BC6E-448B392D03CC}</ProjectGuid>
+    <ProjectGuid>{5C7672FB-9027-4D2F-92F7-817D6581EC88}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>App1_Cell.iOS</RootNamespace>
+    <RootNamespace>App2_ListaBrasil.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>App1_Cell.iOS</AssemblyName>
+    <AssemblyName>App2_ListaBrasil.iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -123,12 +123,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\App1_Cell\App1_Cell.csproj">
-      <Project>{2BA642C5-D218-4D6A-9B44-7FCFA0B60339}</Project>
-      <Name>App1_Cell</Name>
+    <ProjectReference Include="..\App2_ListaBrasil\App2_ListaBrasil.csproj">
+      <Project>{EAD63482-F94B-4369-BAB9-4816CCCF16BD}</Project>
+      <Name>App2_ListaBrasil</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\perfil.png" />
   </ItemGroup>
 </Project>

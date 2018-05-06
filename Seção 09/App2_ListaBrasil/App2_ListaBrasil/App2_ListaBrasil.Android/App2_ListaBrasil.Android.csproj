@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F8A04DDC-DB57-41A6-BC05-B5DF161465A0}</ProjectGuid>
+    <ProjectGuid>{4B63A7B3-90B0-4080-B83D-8875F54CF572}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>App1_Cell.Droid</RootNamespace>
-    <AssemblyName>App1_Cell.Android</AssemblyName>
+    <RootNamespace>App2_ListaBrasil.Droid</RootNamespace>
+    <AssemblyName>App2_ListaBrasil.Android</AssemblyName>
     <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -79,14 +79,14 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\App1_Cell\App1_Cell.csproj">
-      <Project>{2BA642C5-D218-4D6A-9B44-7FCFA0B60339}</Project>
-      <Name>App1_Cell</Name>
+    <ProjectReference Include="..\App2_ListaBrasil\App2_ListaBrasil.csproj">
+      <Project>{EAD63482-F94B-4369-BAB9-4816CCCF16BD}</Project>
+      <Name>App2_ListaBrasil</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\perfil.png" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+
+
+ <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
