@@ -14,12 +14,19 @@ namespace App2_ListaBrasil
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Municipios : ContentPage
 	{
-		public Municipios (Estado estado)
+        private List<Municipio> ListaInternaMunicipio { get; set; }
+        private List<Municipio> ListaFiltradaMunicipio { get; set; }
+
+        public Municipios (Estado estado)
 		{
 			InitializeComponent();
+            ListaInternaMunicipio = Servico.Servico.getMunicipio(estado.id);
+            ListaMunicipios.ItemsSource = ListaInternaMunicipio;
+        }
 
-            ListaMunicipios.ItemsSource = Servico.Servico.getMunicipio(estado.id);
-
-		}
+        private void buscaRapida(object sender, TextChangedEventArgs args) {
+            ListaFiltradaMunicipio = ListaInternaMunicipio.Where(a => a.nome.Contains(args.NewTextValue)).ToList();
+            ListaMunicipios.ItemsSource = ListaFiltradaMunicipio;
+        }
 	}
 }
