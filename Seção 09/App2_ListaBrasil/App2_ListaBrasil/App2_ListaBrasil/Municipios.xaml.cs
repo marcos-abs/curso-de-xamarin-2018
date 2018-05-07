@@ -16,7 +16,10 @@ namespace App2_ListaBrasil
 	{
 		public Municipios (Estado estado)
 		{
-			InitializeComponent ();
+			InitializeComponent();
+
+            ListaMunicipios.ItemsSource = Servico.Servico.getMunicipio(estado.id);
+
 		}
 	}
 }

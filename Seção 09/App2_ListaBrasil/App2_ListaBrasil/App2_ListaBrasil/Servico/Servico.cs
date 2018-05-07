@@ -18,13 +18,13 @@ namespace App2_ListaBrasil.Servico {
             return JsonConvert.DeserializeObject<List<Estado>>(conteudo);
         }
 
-        public List<Estado> getMunicipio(int estado) {
+        public static List<Municipio> getMunicipio(int estado) {
             string NewURL = string.Format(URLMunicipio, estado);
 
             WebClient wc = new WebClient();
             string conteudo = wc.DownloadString(NewURL);
 
-            return JsonConvert.DeserializeObject<List<Estado>>(conteudo);
+            return JsonConvert.DeserializeObject<List<Municipio>>(conteudo);
         }
     }
 }
