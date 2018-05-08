@@ -17,6 +17,20 @@
             <Label Text="Welcome to Xamarin.Forms! 2" />
             <Label Text="Welcome to Xamarin.Forms! 3" />
             <Label Text="Welcome to Xamarin.Forms! 4" />
+            <StackLayout>
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Style TargetType="Label">
+                            <Setter Property="TextColor" Value="Yellow" />
+                            <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                        </Style>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+                <Label Text="Welcome to Xamarin.Forms! 1" />
+                <Label Text="Welcome to Xamarin.Forms! 2" />
+                <Label Text="Welcome to Xamarin.Forms! 3" />
+                <Label Text="Welcome to Xamarin.Forms! 4" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
