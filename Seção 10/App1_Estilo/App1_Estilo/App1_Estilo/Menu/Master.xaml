@@ -7,6 +7,7 @@
         <ContentPage Title="Menu">
             <StackLayout>
                 <Button Text="Implicit Style" Clicked="GoPagina1" />
+                <Button Text="Explicit Style" Clicked="GoPagina2" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
