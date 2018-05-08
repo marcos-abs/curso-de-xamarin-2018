@@ -16,6 +16,7 @@ namespace App1_Estilo.Pagina {
 
         private void MudarCor(object sender, EventArgs args) {
             this.Resources["LblColor"] = Color.Orange;
+            this.Resources["Lbl"] = this.Resources["NewLbl"];
         }
     }
 }
