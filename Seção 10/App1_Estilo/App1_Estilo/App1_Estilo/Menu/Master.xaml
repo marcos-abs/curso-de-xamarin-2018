@@ -10,6 +10,7 @@
                 <Button Text="Explicit Style" Clicked="GoPagina2" />
                 <Button Text="Global Style" Clicked="GoPagina3" />
                 <Button Text="Inherit Style" Clicked="GoPagina4" />
+                <Button Text="Dynamic Style" Clicked="GoPagina5" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
