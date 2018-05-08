@@ -25,5 +25,9 @@ namespace App1_Estilo.Menu {
         private void GoPagina3(object sender, EventArgs args) {
             Detail = new NavigationPage(new Pagina.GlobalStylePage());
         }
+
+        private void GoPagina4(object sender, EventArgs args) {
+            Detail = new NavigationPage(new Pagina.InheritStylePage());
+        }
     }
 }
