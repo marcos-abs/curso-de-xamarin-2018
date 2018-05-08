@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:App1_Estilo"
              x:Class="App1_Estilo.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
+	<Label Text="Welcome to Xamarin.Forms! - MainPage" 
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
 

@@ -8,6 +8,7 @@
             <StackLayout>
                 <Button Text="Implicit Style" Clicked="GoPagina1" />
                 <Button Text="Explicit Style" Clicked="GoPagina2" />
+                <Button Text="Global Style" Clicked="GoPagina3" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
