@@ -5,9 +5,21 @@
              x:Class="App2_Cinemix.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout>
+            <StackLayout Style="{StaticResource Cabecalho}">
                 <Label Text="CINEMIX" Style="{StaticResource TituloApp}" />
                 <Label Text="seu app de cinema" Style="{StaticResource SubTituloApp}" />
+            </StackLayout>
+            <StackLayout Style="{StaticResource Conteudo}">
+                <Label Text="Lançamento" Style="{StaticResource Lancamento}" />
+                <Label Text="Pantera Negra" Style="{StaticResource TituloFilme}" />
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Image Source="Fundo.png" Aspect="AspectFill" HorizontalOptions="Center"/>
+                </Grid>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
