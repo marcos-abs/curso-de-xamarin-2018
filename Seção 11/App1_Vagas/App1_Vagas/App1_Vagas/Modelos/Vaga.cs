@@ -12,6 +12,7 @@ namespace App1_Vagas.Modelos {
         public string NomeVaga { get; set; }
         public short Quantidade { get; set; }
         public string Cidade { get; set; }
+        public string Empresa { get; set; }
         public double Salario { get; set; }
         public string Descricao { get; set; }
         public string TipoContratacao { get; set; }
