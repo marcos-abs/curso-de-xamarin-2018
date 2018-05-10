@@ -12,7 +12,9 @@ namespace App1_Vagas.Banco {
 
         public Database() {
             var dep = DependencyService.Get<ICaminho>();
-            _conexao = new SQLiteConnection();
+            string caminho = dep.ObterCaminho("database.sqlite");
+
+            _conexao = new SQLiteConnection(caminho);
         }
 
         public List<Vaga> Consultar() {
