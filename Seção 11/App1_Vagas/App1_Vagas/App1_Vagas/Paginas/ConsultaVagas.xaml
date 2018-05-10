@@ -12,6 +12,8 @@
                 <Button Text="Adicionar" Clicked="GoCadastro" />
                 <Button Text="Minhas Vagas" Clicked="GoMinhasVagas" />
             </StackLayout>
+            <Entry Placeholder="Pesquisar" />
+            <Label Text="15 vagas encontradas" />
             <ListView>
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -27,7 +29,7 @@
                             <Label Grid.Column="0" Text="{Binding Empresa}" />
                             <Label Grid.Column="0" Text="{Binding Cidade}" />
 
-                            <Label Text="+Detalhes">
+                            <Label Text="+Detalhes" Grid.Column="1">
                                 <Label.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="MasiDetalhesAction" CommandParameter="{Binding .}" />
                                 </Label.GestureRecognizers>
