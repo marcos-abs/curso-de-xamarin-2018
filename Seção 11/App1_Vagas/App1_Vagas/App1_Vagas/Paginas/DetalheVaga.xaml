@@ -4,9 +4,15 @@
              x:Class="App1_Vagas.Paginas.DetalheVaga">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding NomeVaga}" />
+            <Label Text="{Binding Empresa}" />
+            <Label Text="{Binding Quantidade}" />
+            <Label Text="{Binding Cidade}" />
+            <Label Text="{Binding Salario}" />
+            <Label Text="{Binding Descricao}" />
+            <Label Text="{Binding TipoContratacao}" />
+            <Label Text="{Binding Telefone}" />
+            <Label Text="{Binding Email}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
