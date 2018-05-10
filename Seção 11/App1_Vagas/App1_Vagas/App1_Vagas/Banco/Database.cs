@@ -5,6 +5,7 @@ using System.Text;
 using SQLite;
 using App1_Vagas.Modelos;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace App1_Vagas.Banco {
     class Database {
@@ -15,26 +16,31 @@ namespace App1_Vagas.Banco {
             string caminho = dep.ObterCaminho("database.sqlite");
 
             _conexao = new SQLiteConnection(caminho);
+            _conexao.CreateTable<Vaga>();
         }
 
         public List<Vaga> Consultar() {
-            return null;
+            return _conexao.Table<Vaga>().ToList();
+        }
+
+        public List<Vaga> Pesquisar(string palavra) {
+            return _conexao.Table<Vaga>().Where(a => a.NomeVaga.Contains(palavra)).ToList();
         }
 
         public Vaga ObterVagaPorID(int id) {
-            return null;
+            return _conexao.Table<Vaga>().Where(a => a.Id == id).FirstOrDefault();
         }
 
         public void Cadastro(Vaga vaga) {
-
+            _conexao.Insert(vaga);
         }
 
         public void Alteracao(Vaga vaga) {
-
+            _conexao.Update(vaga);
         }
 
-        public void Exclusao(int id) {
-
+        public void Exclusao(Vaga vaga) {
+            _conexao.Delete(vaga);
         }
     }
 }
