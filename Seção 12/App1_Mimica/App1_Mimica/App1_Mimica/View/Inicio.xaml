@@ -4,9 +4,24 @@
              x:Class="App1_Mimica.View.Inicio">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Nome do Grupo 1" />
+            <Entry Placeholder="(opcional)" />
+            <Label Text="Nome do Grupo 2" />
+            <Entry Placeholder="(opcional)" />
+            <Label Text="Nível" />
+            <Picker>
+                <Picker.Items>
+                    <x:String>Aleatório</x:String>
+                    <x:String>Fácil</x:String>
+                    <x:String>Médio</x:String>
+                    <x:String>Dificil</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Tempo de cada palavra (seg)" />
+            <Entry Text="120" />
+            <Label Text="Rodadas" />
+            <Entry Text="7" />
+            <Button Text="Iniciar" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
