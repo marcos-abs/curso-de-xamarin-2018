@@ -12,11 +12,14 @@ using App1_Vagas.Banco;
 namespace App1_Vagas.Paginas {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ConsultaVagas : ContentPage {
+
+        List<Vaga> Lista { get; set; }
+
         public ConsultaVagas() {
             InitializeComponent();
 
             Database database = new Database();
-            var Lista = database.Consultar();
+            Lista = database.Consultar();
             ListaVagas.ItemsSource = Lista;
             if(Lista.Count > 1 ) {
                 lblCount.Text = Lista.Count.ToString() + " vagas cadastradas";
@@ -39,6 +42,10 @@ namespace App1_Vagas.Paginas {
             Label lblDetalhe = (Label)sender;
             Vaga vaga = ((TapGestureRecognizer)lblDetalhe.GestureRecognizers[0]).CommandParameter as Vaga;
             Navigation.PushAsync(new DetalheVaga(vaga));
+        }
+
+        public void PesquisarAction(object sender, TextChangedEventArgs args) {
+            ListaVagas.ItemsSource = Lista.Where(a => a.NomeVaga.Contains(args.NewTextValue)).ToList();
         }
     }
 }
