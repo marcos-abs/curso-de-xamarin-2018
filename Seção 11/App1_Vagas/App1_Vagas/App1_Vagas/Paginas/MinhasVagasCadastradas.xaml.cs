@@ -46,5 +46,9 @@ namespace App1_Vagas.Paginas {
             database.Exclusao(vaga);
             ConsultarVagas();
         }
+
+        public void PesquisarAction(object sender, TextChangedEventArgs args) {
+            ListaVagas.ItemsSource = Lista.Where(a => a.NomeVaga.Contains(args.NewTextValue)).ToList();
+        }
     }
 }
