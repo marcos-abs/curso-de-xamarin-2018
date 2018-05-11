@@ -34,8 +34,7 @@ namespace App1_Vagas.Paginas {
             Database database = new Database();
             database.Cadastro(vaga);
 
-            //TODO Voltar para a tela de pesquisa
-            Navigation.PopAsync();
+            App.Current.MainPage = new NavigationPage(new ConsultaVagas());
         }
     }
 }

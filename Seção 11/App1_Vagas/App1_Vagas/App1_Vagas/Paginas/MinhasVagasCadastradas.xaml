@@ -8,10 +8,6 @@
                 <Label Text="Vagas" FontSize="24" />
                 <Label Text="encontre seu empresa aqui" FontSize="12" />
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Adicionar" Clicked="GoCadastro" />
-                <Button Text="Minhas Vagas" Clicked="GoMinhasVagas" />
-            </StackLayout>
             <Entry Placeholder="Pesquisar" />
             <Label Text="15 vagas encontradas" />
             <ListView>

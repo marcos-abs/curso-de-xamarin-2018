@@ -7,14 +7,19 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace App1_Vagas.Paginas
-{
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MinhasVagasCadastradas : ContentPage
-	{
-		public MinhasVagasCadastradas ()
-		{
-			InitializeComponent ();
-		}
-	}
+namespace App1_Vagas.Paginas {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MinhasVagasCadastradas : ContentPage {
+        public MinhasVagasCadastradas() {
+            InitializeComponent();
+        }
+
+        public void EditarAction(object sender, EventArgs args) {
+
+        }
+
+        public void ExcluirAction(object sender, EventArgs args) {
+
+        }
+    }
 }
