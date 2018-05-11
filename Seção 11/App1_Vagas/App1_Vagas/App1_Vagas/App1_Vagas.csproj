@@ -10,6 +10,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Paginas\CadastrarVaga.xaml.cs">
+      <DependentUpon>CadastrarVaga.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Paginas\ConsultarVagas.xaml.cs">
+      <DependentUpon>ConsultarVagas.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Paginas\DetalharVaga.xaml.cs">
+      <DependentUpon>DetalharVaga.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="Paginas\EditarVagas.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

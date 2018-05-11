@@ -11,9 +11,9 @@ using App1_Vagas.Modelos;
 namespace App1_Vagas.Paginas
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DetalheVaga : ContentPage
+	public partial class DetalharVaga : ContentPage
 	{
-		public DetalheVaga (Vaga vaga)
+		public DetalharVaga (Vaga vaga)
 		{
 			InitializeComponent ();
 

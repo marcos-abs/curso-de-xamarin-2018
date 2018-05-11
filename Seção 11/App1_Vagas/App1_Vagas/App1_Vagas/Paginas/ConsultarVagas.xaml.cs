@@ -11,11 +11,11 @@ using App1_Vagas.Banco;
 
 namespace App1_Vagas.Paginas {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ConsultaVagas : ContentPage {
+    public partial class ConsultarVagas : ContentPage {
 
         List<Vaga> Lista { get; set; }
 
-        public ConsultaVagas() {
+        public ConsultarVagas() {
             InitializeComponent();
 
             Database database = new Database();
@@ -31,7 +31,7 @@ namespace App1_Vagas.Paginas {
         }
 
         public void GoCadastro(object sender, EventArgs args) {
-            Navigation.PushAsync(new CadastroVaga());
+            Navigation.PushAsync(new CadastrarVaga());
         }
 
         public void GoMinhasVagas(object sender, EventArgs args) {
@@ -41,7 +41,7 @@ namespace App1_Vagas.Paginas {
         public void MaisDetalhesAction(object sender, EventArgs args) {
             Label lblDetalhe = (Label)sender;
             Vaga vaga = ((TapGestureRecognizer)lblDetalhe.GestureRecognizers[0]).CommandParameter as Vaga;
-            Navigation.PushAsync(new DetalheVaga(vaga));
+            Navigation.PushAsync(new DetalharVaga(vaga));
         }
 
         public void PesquisarAction(object sender, TextChangedEventArgs args) {

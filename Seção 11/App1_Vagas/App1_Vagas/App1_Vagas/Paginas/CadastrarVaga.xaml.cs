@@ -11,8 +11,8 @@ using App1_Vagas.Banco;
 
 namespace App1_Vagas.Paginas {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CadastroVaga : ContentPage {
-        public CadastroVaga() {
+    public partial class CadastrarVaga : ContentPage {
+        public CadastrarVaga() {
             InitializeComponent();
         }
 
@@ -34,7 +34,7 @@ namespace App1_Vagas.Paginas {
             Database database = new Database();
             database.Cadastro(vaga);
 
-            App.Current.MainPage = new NavigationPage(new ConsultaVagas());
+            App.Current.MainPage = new NavigationPage(new ConsultarVagas());
         }
     }
 }
