@@ -35,7 +35,7 @@ namespace App1_Vagas.Banco {
             _conexao.Insert(vaga);
         }
 
-        public void Alteracao(Vaga vaga) {
+        public void Atualizacao(Vaga vaga) {
             _conexao.Update(vaga);
         }
 

@@ -36,7 +36,7 @@ namespace App1_Vagas.Paginas {
         public void EditarAction(object sender, EventArgs args) {
             Label lblEditar = (Label)sender;
             Vaga vaga = ((TapGestureRecognizer)lblEditar.GestureRecognizers[0]).CommandParameter as Vaga;
-            Navigation.PushAsync(new CadastroVaga(vaga));
+            Navigation.PushAsync(new EditarVagas(vaga));
         }
 
         public void ExcluirAction(object sender, EventArgs args) {

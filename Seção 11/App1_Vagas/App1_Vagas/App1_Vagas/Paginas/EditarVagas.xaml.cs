@@ -6,21 +6,32 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using App1_Vagas.Modelos;
 using App1_Vagas.Banco;
+using App1_Vagas.Modelos;
 
 namespace App1_Vagas.Paginas {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CadastroVaga : ContentPage {
-        public CadastroVaga() {
+    public partial class EditarVagas : ContentPage {
+
+        private Vaga vaga { get; set; }
+
+        public EditarVagas(Vaga vaga) {
             InitializeComponent();
+
+            this.vaga = vaga;
+
+            NomeVaga.Text = vaga.NomeVaga;
+            Quantidade.Text = vaga.Quantidade.ToString();
+            Salario.Text = vaga.Salario.ToString();
+            Empresa.Text = vaga.Empresa;
+            Cidade.Text = vaga.Cidade;
+            Descricao.Text = vaga.Descricao;
+            TipoContratacao.IsToggled = (vaga.TipoContratacao == "CLT") ? false : true;
+            vaga.Telefone = Telefone.Text;
+            vaga.Email = Email.Text;
         }
 
         public void SalvarAction(object sender, EventArgs args) {
-            
-            Vaga vaga = new Vaga();
-
-            //TODO Validar dados do cadastro
             vaga.NomeVaga = NomeVaga.Text;
             vaga.Quantidade = short.Parse(Quantidade.Text);
             vaga.Salario = double.Parse(Salario.Text);
@@ -32,9 +43,9 @@ namespace App1_Vagas.Paginas {
             vaga.Email = Email.Text;
 
             Database database = new Database();
-            database.Cadastro(vaga);
+            database.Atualizacao(vaga);
 
-            App.Current.MainPage = new NavigationPage(new ConsultaVagas());
+            App.Current.MainPage = new NavigationPage(new MinhasVagasCadastradas());
         }
     }
 }
