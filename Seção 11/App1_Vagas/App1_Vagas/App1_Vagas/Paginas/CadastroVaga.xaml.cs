@@ -12,8 +12,12 @@ using App1_Vagas.Banco;
 namespace App1_Vagas.Paginas {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CadastroVaga : ContentPage {
-        public CadastroVaga() {
+        public CadastroVaga(Vaga vaga = null) {
             InitializeComponent();
+
+            if(vaga != null) {
+                //TODO Edição
+            }
         }
 
         public void SalvarAction(object sender, EventArgs args) {
