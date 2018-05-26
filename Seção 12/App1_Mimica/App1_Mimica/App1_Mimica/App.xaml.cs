@@ -8,7 +8,7 @@ namespace App1_Mimica {
         public App() {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new App1_Mimica.View.Inicio();
         }
 
         protected override void OnStart() {
