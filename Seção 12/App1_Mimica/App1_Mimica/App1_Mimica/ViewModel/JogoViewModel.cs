@@ -84,14 +84,18 @@ namespace App1_Mimica.ViewModel {
         }
 
         private void GoProximoGrupo() {
-            //TODO Verificar se a rodada terminou
             Grupo grupo;
             if (Armazenamento.Armazenamento.Jogo.Grupo1 == Grupo) {
                 grupo = Armazenamento.Armazenamento.Jogo.Grupo2;
             } else {
                 grupo = Armazenamento.Armazenamento.Jogo.Grupo1;
+                Armazenamento.Armazenamento.RodadaAtual++;
             }
-            App.Current.MainPage = new View.Jogo(grupo);
+            if(Armazenamento.Armazenamento.RodadaAtual > Armazenamento.Armazenamento.Jogo.Rodadas) {
+                App.Current.MainPage = new View.Resultado();
+            } else {
+                App.Current.MainPage = new View.Jogo(grupo);
+            }
         }
         private void ErrouAction() {
             GoProximoGrupo();
