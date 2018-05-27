@@ -11,7 +11,10 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <Label Text="{Binding NomeGrupo}" />
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding NumeroGrupo}" />
+                    <Label Text="{Binding NomeGrupo}" />
+                </StackLayout>
                 <Label Text="{Binding PalavraPontuacao, Converter={StaticResource convPontuacao}}" />
                 <Label Text="{Binding Palavra}" HorizontalOptions="CenterAndExpand" />
                 <Button Text="Mostrar" IsVisible="{Binding IsVisibleBtnMostrar}"  Command="{Binding MostrarPalavra}"/>
