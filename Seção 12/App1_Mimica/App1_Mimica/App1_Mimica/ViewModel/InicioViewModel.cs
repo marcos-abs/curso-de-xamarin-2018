@@ -12,6 +12,8 @@ namespace App1_Mimica.ViewModel {
 
         public Jogo Jogo { get; set; }
         public Command IniciarCommand { get; set; }
+        private string _MsgErro;
+        public string MsgErro { get { return _MsgErro; } set { _MsgErro = value; onPropertyChanged("MsgErro"); } }
 
         public InicioViewModel() {
             IniciarCommand = new Command(IniciarJogo);
@@ -24,10 +26,20 @@ namespace App1_Mimica.ViewModel {
         }
 
         private void IniciarJogo() {
-
-            Armazenamento.Armazenamento.Jogo = this.Jogo; // sem o uso do using pq utiliza o caminho completo da classe no projeto.
-            Armazenamento.Armazenamento.RodadaAtual = 1;
-            App.Current.MainPage = new View.Jogo(Jogo.Grupo1);
+            string error = "";
+            if(Jogo.TempoPalavra < 10) {
+                error += "O tempo mínimo para a palavra é de 10 segundos.";
+            }
+            if(Jogo.Rodadas < 1) {
+                error += "\nO valor mínimo para a rodada é 1.";
+            }
+            if(error.Length > 0) {
+                MsgErro = error;
+            } else {
+                Armazenamento.Armazenamento.Jogo = this.Jogo; // sem o uso do using pq utiliza o caminho completo da classe no projeto.
+                Armazenamento.Armazenamento.RodadaAtual = 1;
+                App.Current.MainPage = new View.Jogo(Jogo.Grupo1);
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged; // requisito para que funcione INotifyPropertyChanged.
