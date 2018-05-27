@@ -3,6 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1_Mimica.App">
 	<Application.Resources>
-    
+        <ResourceDictionary>
+            <!-- Cabeçalho -->
+            <Style TargetType="StackLayout" x:Key="Cabecalho">
+                <Setter Property="BackgroundColor" Value="#F2C14E" />
+                <Setter Property="Padding" Value="10" />
+            </Style>
+            <Style TargetType="Label" x:Key="CabecalhoTitulo">
+                <Setter Property="TextColor" Value="#FFFFFF" />
+            </Style>
+            <!-- Container -->
+            <Style x:Key="Container" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#FAFF7F" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            </Style>
+            <!-- Others -->
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#F78053" />
+            </Style>
+        </ResourceDictionary>
 	</Application.Resources>
 </Application>
