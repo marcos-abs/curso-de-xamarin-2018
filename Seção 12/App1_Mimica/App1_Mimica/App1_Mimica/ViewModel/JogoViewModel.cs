@@ -63,7 +63,6 @@ namespace App1_Mimica.ViewModel {
             IsVisibleContainerIniciar = false;
             IsVisibleContainerContagem = true;
 
-            //TODO Quando o tempo terminar, parar a contagem/apresentação.
             int i = Armazenamento.Armazenamento.Jogo.TempoPalavra; // erro de exceção.
             TextoContagem = i.ToString();
             i--;
