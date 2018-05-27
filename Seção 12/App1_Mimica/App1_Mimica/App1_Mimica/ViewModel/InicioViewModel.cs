@@ -10,21 +10,24 @@ using Xamarin.Forms; // para ter acesso ao Tipo Command.
 namespace App1_Mimica.ViewModel {
     public class InicioViewModel : INotifyPropertyChanged {
 
-        public Jogo jogo { get; set; }
+        public Jogo Jogo { get; set; }
         public Command IniciarCommand { get; set; }
 
         public InicioViewModel() {
             IniciarCommand = new Command(IniciarJogo);
-            Jogo Jogo = new Jogo();
+            Jogo = new Jogo(); // observe que a variavel Jogo não refere-se ao tipo e sim a variavel.
             Jogo.Grupo1 = new Grupo();
             Jogo.Grupo2 = new Grupo();
+
+            Jogo.TempoPalavra = 120;
+            Jogo.Rodadas = 7;
         }
 
         private void IniciarJogo() {
 
-            Armazenamento.Armazenamento.Jogo = this.jogo; // sem o uso do using pq utiliza o caminho completo da classe no projeto.
+            Armazenamento.Armazenamento.Jogo = this.Jogo; // sem o uso do using pq utiliza o caminho completo da classe no projeto.
             Armazenamento.Armazenamento.RodadaAtual = 1;
-            App.Current.MainPage = new View.Jogo();
+            App.Current.MainPage = new View.Jogo(Jogo.Grupo1);
         }
 
         public event PropertyChangedEventHandler PropertyChanged; // requisito para que funcione INotifyPropertyChanged.

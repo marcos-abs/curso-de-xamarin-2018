@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <Label Text="Grupo" />
+                <Label Text="{Binding NomeGrupo}" />
                 <Label Text="{Binding PalavraPontuacao}" />
                 <Label Text="{Binding Palavra}" HorizontalOptions="CenterAndExpand" />
                 <Button Text="Mostrar" IsVisible="{Binding IsVisibleBtnMostrar}"  Command="{Binding MostrarPalavra}"/>
@@ -20,7 +20,7 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout IsVisible="{Binding IsVisibleContainerIniciar}">
-                <Button Text="Iniciar" Command="{Binding Iniciar}"/>
+                <Button IsVisible="{Binding IsVisibleBtnIniciar}" Text="Iniciar" Command="{Binding Iniciar}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
