@@ -55,6 +55,37 @@ namespace App1_Mimica.ViewModel {
         private void MostrarPalavraAction() {
             PalavraPontuacao = 3;
             Palavra = "Sentar";
+
+            var NumNivel = Armazenamento.Armazenamento.Jogo.NivelNumerico;
+            if (NumNivel == 0) {
+                //Aleatório.
+                Random rd = new Random();
+                int niv = rd.Next(0, 2); // sorteia o nivel de dificuldade.
+                int ind = rd.Next(0, Armazenamento.Armazenamento.Palavras[niv].Length);
+                Palavra = Armazenamento.Armazenamento.Palavras[niv][ind];
+                PalavraPontuacao = (byte) ((niv==0) ? 1 : (niv == 1) ? 3 : 5);
+            }
+            if (NumNivel == 1) {
+                //Nivel Fácil.
+                Random rd = new Random();
+                int ind = rd.Next(0, Armazenamento.Armazenamento.Palavras[NumNivel - 1].Length);
+                Palavra = Armazenamento.Armazenamento.Palavras[NumNivel - 1][ind];
+                PalavraPontuacao = 1;
+            }
+            if (NumNivel == 2) {
+                //Nivel Médio.
+                Random rd = new Random();
+                int ind = rd.Next(0, Armazenamento.Armazenamento.Palavras[NumNivel - 1].Length);
+                Palavra = Armazenamento.Armazenamento.Palavras[NumNivel - 1][ind];
+                PalavraPontuacao = 3;
+            }
+            if (NumNivel == 3) {
+                //Nivel Dificil.
+                Random rd = new Random();
+                int ind = rd.Next(0, Armazenamento.Armazenamento.Palavras[NumNivel - 1].Length);
+                Palavra = Armazenamento.Armazenamento.Palavras[NumNivel - 1][ind];
+                PalavraPontuacao = 5;
+            }
             IsVisibleBtnMostrar = false;
             IsVisibleContainerIniciar = true;
         }
