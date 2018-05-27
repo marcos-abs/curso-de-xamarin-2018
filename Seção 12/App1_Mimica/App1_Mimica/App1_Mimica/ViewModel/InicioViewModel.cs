@@ -15,6 +15,9 @@ namespace App1_Mimica.ViewModel {
 
         public InicioViewModel() {
             IniciarCommand = new Command(IniciarJogo);
+            Jogo Jogo = new Jogo();
+            Jogo.Grupo1 = new Grupo();
+            Jogo.Grupo2 = new Grupo();
         }
 
         private void IniciarJogo() {
