@@ -8,9 +8,9 @@
                 <Label Text="Grupo" />
                 <Label Text="{Binding PalavraPontuacao}" />
                 <Label Text="{Binding Palavra}" HorizontalOptions="CenterAndExpand" />
-                <Button Text="Mostrar" Command="{Binding MostrarPalavra}"/>
+                <Button Text="Mostrar" IsVisible="{Binding IsVisibleBtnMostrar}"  Command="{Binding MostrarPalavra}"/>
             </StackLayout>
-            <StackLayout IsVisible="{Binding ContainerContagem}">
+            <StackLayout IsVisible="{Binding IsVisibleContainerContagem}">
                 <Label Text="{Binding TextoContagem}" FontSize="100" HorizontalOptions="CenterAndExpand" />
                 <Label Text="seg" HorizontalOptions="CenterAndExpand" />
 
@@ -19,7 +19,7 @@
                     <Button Text="Errou" BackgroundColor="OrangeRed" TextColor="White" Command="{Binding Errou}"/>
                 </StackLayout>
             </StackLayout>
-            <StackLayout IsVisible="{Binding ContainerIniciar}">
+            <StackLayout IsVisible="{Binding IsVisibleContainerIniciar}">
                 <Button Text="Iniciar" Command="{Binding Iniciar}"/>
             </StackLayout>
         </StackLayout>
