@@ -22,11 +22,11 @@ namespace App1_Mimica.ViewModel {
         private string _TextoContagem;
         public string TextoContagem { get { return _TextoContagem; } set { _TextoContagem = value; OnPropertyChanged("TextoContagem"); } }
 
+        private bool _IsVisibleBtnIniciar;
+        public bool IsVisibleBtnIniciar { get { return _IsVisibleBtnIniciar; } set { _IsVisibleBtnIniciar = value; OnPropertyChanged("IsVisibleBtnIniciar"); } }
+
         private bool _IsVisibleContainerContagem;
         public bool IsVisibleContainerContagem { get { return _IsVisibleContainerContagem; } set { _IsVisibleContainerContagem = value; OnPropertyChanged("IsVisibleContainerContagem"); } }
-
-        private bool _IsVisibleContainerIniciar;
-        public bool IsVisibleContainerIniciar { get { return _IsVisibleContainerIniciar; } set { _IsVisibleContainerIniciar = value; OnPropertyChanged("IsVisibleContainerIniciar"); } }
 
         private bool _IsVisibleBtnMostrar;
         public bool IsVisibleBtnMostrar { get { return _IsVisibleBtnMostrar; } set { _IsVisibleBtnMostrar = value; OnPropertyChanged("IsVisibleBtnMostrar"); } }
@@ -46,7 +46,7 @@ namespace App1_Mimica.ViewModel {
                 NumeroGrupo = "Grupo 2 ";
             }
             IsVisibleContainerContagem = false;
-            IsVisibleContainerIniciar = false;
+            IsVisibleBtnIniciar = false;
             IsVisibleBtnMostrar = true;
 
             Palavra = "****************************";
@@ -92,11 +92,11 @@ namespace App1_Mimica.ViewModel {
                 PalavraPontuacao = 5;
             }
             IsVisibleBtnMostrar = false;
-            IsVisibleContainerIniciar = true;
+            IsVisibleBtnIniciar = true;
         }
 
         private void IniciarAction() {
-            IsVisibleContainerIniciar = false;
+            IsVisibleBtnIniciar = false;
             IsVisibleContainerContagem = true;
 
             int i = Armazenamento.Armazenamento.Jogo.TempoPalavra; // erro de exceção.

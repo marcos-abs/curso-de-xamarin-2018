@@ -18,9 +18,22 @@
                 <Setter Property="Padding" Value="10" />
                 <Setter Property="VerticalOptions" Value="FillAndExpand" />
             </Style>
-            <!-- Others -->
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="#F78053" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#F78053" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <!-- Container Especial-->
+            <Style x:Key="ContainerEspecial" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#FBFFB3" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="OutlineColor" Value="#F78053" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="Padding" Value="0" />
             </Style>
         </ResourceDictionary>
 	</Application.Resources>
