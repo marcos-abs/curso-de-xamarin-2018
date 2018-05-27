@@ -24,6 +24,7 @@
             <Style TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#F78053" />
                 <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
             <!-- Container Especial-->
             <Style x:Key="ContainerEspecial" TargetType="StackLayout">

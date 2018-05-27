@@ -16,11 +16,11 @@
                 <Frame>
                     <StackLayout Style="{StaticResource ContainerEspecial}">
                         <StackLayout Orientation="Horizontal" >
-                            <Label Text="{Binding NumeroGrupo}"/>
-                            <Label Text="{Binding NomeGrupo}"/>
+                            <Label Text="{Binding NumeroGrupo}" FontSize="32"/>
+                            <Label Text="{Binding NomeGrupo}" FontSize="32"/>
                         </StackLayout>
-                        <Label Text="{Binding PalavraPontuacao, Converter={StaticResource convPontuacao}}"/>
-                        <Label Text="{Binding Palavra}" HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="{Binding PalavraPontuacao, Converter={StaticResource convPontuacao}}" FontSize="32"/>
+                        <Label Text="{Binding Palavra}" HorizontalOptions="CenterAndExpand" FontSize="64" FontAttributes="Bold"/>
                         <Button Text="Mostrar" IsVisible="{Binding IsVisibleBtnMostrar}"  Command="{Binding MostrarPalavra}"/>
                     </StackLayout>
                 </Frame>

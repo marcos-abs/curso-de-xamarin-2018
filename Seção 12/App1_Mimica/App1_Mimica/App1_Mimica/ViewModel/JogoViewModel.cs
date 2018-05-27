@@ -49,7 +49,7 @@ namespace App1_Mimica.ViewModel {
             IsVisibleBtnIniciar = false;
             IsVisibleBtnMostrar = true;
 
-            Palavra = "****************************";
+            Palavra = "***************";
 
             MostrarPalavra = new Command(MostrarPalavraAction);
             Acertou = new Command(AcertouAction);
