@@ -61,5 +61,21 @@ namespace App1_NossoChat.Service {
             }
             return false;
         }
+
+        public static bool RenomearChat(Chat chat) {
+            var URL = EnderecoBase + "/chat" + chat.id;
+
+            FormUrlEncodedContent param = new FormUrlEncodedContent(new[] {
+                new KeyValuePair<string, string>("nome", chat.nome)
+            });
+
+            HttpClient requisicao = new HttpClient();
+            HttpResponseMessage resposta = requisicao.PutAsync(URL, param).GetAwaiter().GetResult();
+
+            if (resposta.StatusCode == HttpStatusCode.OK) {
+                return true;
+            }
+            return false;
+        }
     }
 }
