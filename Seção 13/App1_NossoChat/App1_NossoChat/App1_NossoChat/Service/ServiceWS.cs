@@ -105,5 +105,22 @@ namespace App1_NossoChat.Service {
             }
             return null;
         }
+
+        public static bool InsertMensagem(Mensagem mensagem) {
+            var URL = EnderecoBase + "/chat/" + mensagem.id + "/msg";
+
+            FormUrlEncodedContent param = new FormUrlEncodedContent(new[] {
+                new KeyValuePair<string, string>("mensagem", mensagem.mensagem),
+                new KeyValuePair<string, string>("id_usuario", mensagem.id_usuario.ToString())
+            });
+
+            HttpClient requisicao = new HttpClient();
+            HttpResponseMessage resposta = requisicao.PostAsync(URL, param).GetAwaiter().GetResult();
+
+            if (resposta.StatusCode == HttpStatusCode.OK) {
+                return true;
+            }
+            return false;
+        }
     }
 }
