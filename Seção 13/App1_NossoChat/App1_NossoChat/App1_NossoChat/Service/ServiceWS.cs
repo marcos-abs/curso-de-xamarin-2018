@@ -82,12 +82,28 @@ namespace App1_NossoChat.Service {
             var URL = EnderecoBase + "/chat/delete/" + chat.id;
 
             HttpClient requisicao = new HttpClient();
-            HttpResponseMessage resposta = requisicao.GetAsync(URL).GetAwaiter().GetResult();
+            HttpResponseMessage resposta = requisicao.DeleteAsync(URL).GetAwaiter().GetResult();
 
             if (resposta.StatusCode == HttpStatusCode.OK) {
                 return true;
             }
             return false;
+        }
+
+        public static List<Mensagem> GetMensagensChat(Chat chat) {
+            var URL = EnderecoBase + "/chat/" + chat.id + "/msg";
+
+            HttpClient requisicao = new HttpClient();
+            HttpResponseMessage resposta = requisicao.GetAsync(URL).GetAwaiter().GetResult();
+
+            if (resposta.StatusCode == HttpStatusCode.OK) {
+                string conteudo = resposta.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+                if(conteudo.Length > 2) {
+                    List<Mensagem> lista = JsonConvert.DeserializeObject<List<Mensagem>>(conteudo);
+                    return lista;
+                }
+            }
+            return null;
         }
     }
 }
