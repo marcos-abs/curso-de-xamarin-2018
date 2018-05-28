@@ -122,5 +122,17 @@ namespace App1_NossoChat.Service {
             }
             return false;
         }
+
+        public static bool DeleteMensagem(Mensagem mensagem) {
+            var URL = EnderecoBase + "/chat/" + mensagem.id + "/delete/" + mensagem.id;
+
+            HttpClient requisicao = new HttpClient();
+            HttpResponseMessage resposta = requisicao.DeleteAsync(URL).GetAwaiter().GetResult();
+
+            if (resposta.StatusCode == HttpStatusCode.OK) {
+                return true;
+            }
+            return false;
+        }
     }
 }
