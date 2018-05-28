@@ -24,24 +24,24 @@ namespace App1_NossoChat.Service {
             HttpClient requisicao = new HttpClient();
             HttpResponseMessage resposta = requisicao.PostAsync(URL, param).GetAwaiter().GetResult();
 
-            if(resposta.StatusCode == HttpStatusCode.OK) {
+            if (resposta.StatusCode == HttpStatusCode.OK) {
                 //TODO Deserializar, retornar no metodo e salvar como login.
             }
             return null;
         }
 
         public static List<Chat> GetChats() {
-            var URL = EnderecoBase + "/chats";
+            var URL = EnderecoBase + "/chat";
 
             HttpClient requisicao = new HttpClient();
             HttpResponseMessage resposta = requisicao.GetAsync(URL).GetAwaiter().GetResult();
 
             if (resposta.StatusCode == HttpStatusCode.OK) {
                 string conteudo = resposta.Content.ReadAsStringAsync().GetAwaiter().GetResult();
-                if(conteudo.Length > 2) {
+                if (conteudo.Length > 2) {
                     List<Chat> lista = JsonConvert.DeserializeObject<List<Chat>>(conteudo);
                     return lista;
-                } 
+                }
             }
             return null;
         }
@@ -71,6 +71,18 @@ namespace App1_NossoChat.Service {
 
             HttpClient requisicao = new HttpClient();
             HttpResponseMessage resposta = requisicao.PutAsync(URL, param).GetAwaiter().GetResult();
+
+            if (resposta.StatusCode == HttpStatusCode.OK) {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool DeleteChat(Chat chat) {
+            var URL = EnderecoBase + "/chat/delete/" + chat.id;
+
+            HttpClient requisicao = new HttpClient();
+            HttpResponseMessage resposta = requisicao.GetAsync(URL).GetAwaiter().GetResult();
 
             if (resposta.StatusCode == HttpStatusCode.OK) {
                 return true;
