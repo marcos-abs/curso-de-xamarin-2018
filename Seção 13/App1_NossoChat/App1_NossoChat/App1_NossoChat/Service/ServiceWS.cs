@@ -5,6 +5,7 @@ using System.Text;
 using System.Net;       // para utilizar verbo POST para requisições para WEB 1de2.
 using System.Net.Http;  // para utilizar verbo POST para requisições para WEB 2de2.
 using App1_NossoChat.Model; // para utilizar a classe "Usuario" do projeto.
+using Newtonsoft.Json;  // para serializar e deserializar API JSON.
 
 namespace App1_NossoChat.Service {
     public class ServiceWS {
@@ -25,6 +26,22 @@ namespace App1_NossoChat.Service {
 
             if(resposta.StatusCode == HttpStatusCode.OK) {
                 //TODO Deserializar, retornar no metodo e salvar como login.
+            }
+            return null;
+        }
+
+        public static List<Chat> GetChats() {
+            var URL = EnderecoBase + "/chats";
+
+            HttpClient requisicao = new HttpClient();
+            HttpResponseMessage resposta = requisicao.GetAsync(URL).GetAwaiter().GetResult();
+
+            if (resposta.StatusCode == HttpStatusCode.OK) {
+                string conteudo = resposta.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+                if(conteudo.Length > 2) {
+                    List<Chat> lista = JsonConvert.DeserializeObject<List<Chat>>(conteudo);
+                    return lista;
+                } 
             }
             return null;
         }
