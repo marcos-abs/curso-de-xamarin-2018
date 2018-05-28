@@ -45,5 +45,21 @@ namespace App1_NossoChat.Service {
             }
             return null;
         }
+
+        public static bool InsertChat(Chat chat) {
+            var URL = EnderecoBase + "/chat";
+
+            FormUrlEncodedContent param = new FormUrlEncodedContent(new[] {
+                new KeyValuePair<string, string>("nome", chat.nome)
+            });
+
+            HttpClient requisicao = new HttpClient();
+            HttpResponseMessage resposta = requisicao.PostAsync(URL, param).GetAwaiter().GetResult();
+
+            if (resposta.StatusCode == HttpStatusCode.OK) {
+                return true;
+            }
+            return false;
+        }
     }
 }
