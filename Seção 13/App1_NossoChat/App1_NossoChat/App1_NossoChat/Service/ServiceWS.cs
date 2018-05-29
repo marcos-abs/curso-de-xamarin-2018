@@ -25,7 +25,8 @@ namespace App1_NossoChat.Service {
             HttpResponseMessage resposta = requisicao.PostAsync(URL, param).GetAwaiter().GetResult();
 
             if (resposta.StatusCode == HttpStatusCode.OK) {
-                //TODO Deserializar, retornar no metodo e salvar como login.
+                var conteudo = resposta.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+                return JsonConvert.DeserializeObject<Usuario>(conteudo);
             }
             return null;
         }

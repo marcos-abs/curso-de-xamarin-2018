@@ -8,8 +8,9 @@
             <Label Text="NossoChat" TextColor="White" />
             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Entry Text="{Binding Nome}" BackgroundColor="White" TextColor="#5ED055" />
-                <Entry Text="{Binding Senha}" BackgroundColor="White" TextColor="#5ED055" />
-                <Button BackgroundColor="Transparent" TextColor="White" Text="Acessar/Cadastrar" />
+                <Entry Text="{Binding Senha}" IsPassword="true" BackgroundColor="White" TextColor="#5ED055" />
+                <Button BackgroundColor="Transparent" TextColor="White" Text="Acessar/Cadastrar" Command="{Binding AcessarCommand}" />
+                <Label Text="{Binding Mensagem}" TextColor="White" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
