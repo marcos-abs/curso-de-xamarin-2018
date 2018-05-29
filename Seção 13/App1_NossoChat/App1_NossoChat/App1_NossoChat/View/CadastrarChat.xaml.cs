@@ -16,5 +16,5 @@ namespace App1_NossoChat.View
 		{
 			InitializeComponent ();
 		}
-	}
+    }
 }
