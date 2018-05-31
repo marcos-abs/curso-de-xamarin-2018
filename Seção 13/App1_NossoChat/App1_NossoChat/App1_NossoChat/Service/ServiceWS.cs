@@ -108,7 +108,7 @@ namespace App1_NossoChat.Service {
         }
 
         public static bool InsertMensagem(Mensagem mensagem) {
-            var URL = EnderecoBase + "/chat/" + mensagem.id + "/msg";
+            var URL = EnderecoBase + "/chat/" + mensagem.id_chat + "/msg";
 
             FormUrlEncodedContent param = new FormUrlEncodedContent(new[] {
                 new KeyValuePair<string, string>("mensagem", mensagem.mensagem),

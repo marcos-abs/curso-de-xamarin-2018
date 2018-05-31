@@ -12,8 +12,23 @@ using App1_NossoChat.Util; // GetUsuarioLogado.
 namespace App1_NossoChat.ViewModel {
     public class MensagemViewModel : INotifyPropertyChanged {
 
-        // Encapsulamento do SelectedItemChat para o OnPropertyChanged funcionar.
         private StackLayout SL;
+        private Chat chat;
+        public Command btnEnviarCommand { get; set; }
+        public Command AtualizarCommand { get; set; }
+
+        private string _txtMensagem;
+        public string txtMensagem {
+            get {
+                return _txtMensagem;
+            }
+            set {
+                _txtMensagem = value;
+                OnPropertyChanged("txtMensagem");
+            }
+        }
+
+        // Encapsulamento do SelectedItemChat para o OnPropertyChanged funcionar.
         private List<Mensagem> _mensagens;
         public List<Mensagem> Mensagens {
             get {
@@ -22,13 +37,37 @@ namespace App1_NossoChat.ViewModel {
             set {
                 _mensagens = value;
                 OnPropertyChanged("Mensagem");
-                ShowOnScreen();
+                if (value != null) {
+                    ShowOnScreen();
+                }
             }
         }
 
         public MensagemViewModel(Chat chat, StackLayout SLMensagemContainer) {
+            this.chat = chat;
             SL = SLMensagemContainer;
+            Atualizar();
+            btnEnviarCommand = new Command(btnEnviar);
+            AtualizarCommand = new Command(Atualizar);
+            Device.StartTimer(TimeSpan.FromSeconds(1), () => {
+                Atualizar();
+                return true;
+            });
+        }
+
+        private void Atualizar() {
             Mensagens = ServiceWS.GetMensagensChat(chat);
+        }
+
+        private void btnEnviar() {
+            var msg = new Mensagem() {
+                id_usuario = UsuarioUtil.GetUsuarioLogado().id,
+                mensagem = txtMensagem,
+                id_chat = chat.id
+            };
+            ServiceWS.InsertMensagem(msg);
+            Atualizar();
+            txtMensagem = string.Empty; // que é a mesma coisa que txtMensagem = "";
         }
 
         private Xamarin.Forms.View CriarMensagemPropria(Mensagem mensagem) {
