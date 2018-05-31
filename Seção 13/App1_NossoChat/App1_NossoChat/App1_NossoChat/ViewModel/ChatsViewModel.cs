@@ -26,6 +26,7 @@ namespace App1_NossoChat.ViewModel {
 
         private void GoPaginaMensagem(Chat chat) {
             if(chat != null) {
+                SelectedItemChat = null; // não funciona sozinho, somente com o Mode=TwoWay no XAML.
                 ((NavigationPage)App.Current.MainPage).Navigation.PushAsync(new View.Mensagem(chat));
             }
         }
