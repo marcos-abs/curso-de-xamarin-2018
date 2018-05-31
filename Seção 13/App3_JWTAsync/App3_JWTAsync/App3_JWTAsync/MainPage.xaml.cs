@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using App3_JWTAsync.Service;
 
 namespace App3_JWTAsync {
     public partial class MainPage : ContentPage {
@@ -11,12 +12,14 @@ namespace App3_JWTAsync {
             InitializeComponent();
         }
 
-        public void GetTokenAction(object sender, EventArgs args) {
-
+        public async void GetTokenAction(object sender, EventArgs args) {
+            string resultado = await JWTService.GetToken(nome.Text, password.Text);
+            lblToken.Text = resultado;
         }
 
-        public void VerificarAction(object sender, EventArgs args) {
-
+        public async void VerificarAction(object sender, EventArgs args) {
+            string resultado = await JWTService.Verificar();
+            lblResultado.Text = resultado;
         }
     }
 }
