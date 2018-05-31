@@ -7,6 +7,7 @@ using Xamarin.Forms; // necessário para utilizar a classe Command.
 using App1_NossoChat.Model; // necessário para utilizar as classes do projeto.
 using App1_NossoChat.Service; // necessário para utilizar a classe de WebServices do projeto.
 using Newtonsoft.Json; // necessário para utilizar as classes Serialize e Deserialize.
+using App1_NossoChat.Util; // necessário para utilizar as classes SetUsuarioLogado e GetUsuarioLogado.
 
 namespace App1_NossoChat.ViewModel {
     public class PaginaInicialViewModel : INotifyPropertyChanged {
@@ -34,7 +35,8 @@ namespace App1_NossoChat.ViewModel {
             if(usuarioLogado == null) {
                 Mensagem = "Usuário/Senha incorreto(a)(s).";
             } else {
-                App.Current.Properties["LOGIN"] = JsonConvert.SerializeObject(usuarioLogado);
+                UsuarioUtil.SetUsuarioLogado(usuarioLogado);
+                //App.Current.Properties["LOGIN"] = JsonConvert.SerializeObject(usuarioLogado); // desnecessário por conta do método SetUsuarioLogado.
                 App.Current.MainPage = new NavigationPage(new View.Chats()) { BarBackgroundColor = Color.FromHex("#5ED055"), BarTextColor = Color.White };
             }
         }

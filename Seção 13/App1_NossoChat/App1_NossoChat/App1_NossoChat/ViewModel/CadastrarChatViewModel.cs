@@ -33,7 +33,7 @@ namespace App1_NossoChat.ViewModel {
             if (status == true) {
                 ((NavigationPage)App.Current.MainPage).Navigation.PopAsync();
                 var Nav = (NavigationPage)App.Current.MainPage;
-                var Chats = (View.Chats)Nav.CurrentPage;
+                var Chats = (View.Chats)Nav.RootPage; // Correção: Seção 13 Aula 217
                 var ViewModel = (ChatsViewModel)Chats.BindingContext;
                 if(ViewModel.AtualizarCommand.CanExecute(null)) {
                     ViewModel.AtualizarCommand.Execute(null);
