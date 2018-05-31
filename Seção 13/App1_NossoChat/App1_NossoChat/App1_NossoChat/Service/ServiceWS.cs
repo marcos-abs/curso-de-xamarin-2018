@@ -32,7 +32,7 @@ namespace App1_NossoChat.Service {
         }
 
         public static List<Chat> GetChats() {
-            var URL = EnderecoBase + "/chat";
+            var URL = EnderecoBase + "/chats";
 
             HttpClient requisicao = new HttpClient();
             HttpResponseMessage resposta = requisicao.GetAsync(URL).GetAwaiter().GetResult();

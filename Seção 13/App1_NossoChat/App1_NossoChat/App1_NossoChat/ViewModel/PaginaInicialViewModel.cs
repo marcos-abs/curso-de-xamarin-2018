@@ -35,10 +35,16 @@ namespace App1_NossoChat.ViewModel {
                 Mensagem = "Usuário/Senha incorreto(a)(s).";
             } else {
                 App.Current.Properties["LOGIN"] = JsonConvert.SerializeObject(usuarioLogado);
-                App.Current.MainPage = new NavigationPage(new View.Chats());
+                App.Current.MainPage = new NavigationPage(new View.Chats()) { BarBackgroundColor = Color.FromHex("#5ED055"), BarTextColor = Color.White };
             }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+        // Para não ocorrer Exceptions
+        private void OnPropertyChanged(string PropertyName) {
+            if (PropertyChanged != null) {
+                PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));
+            }
+        }
     }
 }

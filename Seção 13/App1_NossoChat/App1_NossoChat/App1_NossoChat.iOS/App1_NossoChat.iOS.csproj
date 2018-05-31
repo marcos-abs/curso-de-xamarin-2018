@@ -158,4 +158,16 @@
       <Version>3.0.0.482510</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\add.png" />
+  </ItemGroup>
 </Project>
